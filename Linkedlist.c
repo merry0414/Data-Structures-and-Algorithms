@@ -100,3 +100,15 @@ void delete(Node **head, int value)
 		printf("Not Found. Fail to delete.");
 	}
 }
+
+//delete the whole Linkedlist; need the head of the Linkedlist
+void all_delete(Node **head)
+{
+	Node *phead = NULL;
+	while(*head)
+    {
+        phead = *head;
+        *head = (*head) -> next;
+		free(phead);
+	}
+}
